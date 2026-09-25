@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 useHead({
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' }
@@ -19,16 +19,36 @@ useSeoMeta({
   ogImage: 'https://ui.nuxt.com/assets/templates/nuxt/starter-light.png',
   twitterCard: 'summary_large_image'
 })
+
+import * as nuxtUiLocales from '@nuxt/ui/locale'
+const { locale, locales, setLocale } = useI18n()
+
+const availableLocales = computed(() =>
+  locales.value
+    .map(locale => nuxtUiLocales[typeof locale === 'string' ? locale : locale.code])
+    .filter(Boolean)
+)
+
+const currentLocale = computed({
+  get: () => locale.value,
+  set: (val: string) => val && setLocale(val as 'en' | 'de')
+})
+
 </script>
 
 <template>
   <UApp>
     <UHeader>
       <template #left>
-        <p>left header section</p>
+        <p>logo goes here</p>
       </template>
 
       <template #right>
+        <ULocaleSelect 
+          v-model="currentLocale" 
+          :locales="availableLocales" 
+          class="w-48" 
+        />
         <UColorModeButton />
       </template>
     </UHeader>
@@ -37,7 +57,7 @@ useSeoMeta({
       <NuxtPage />
     </UMain>
 
-    <USeparator icon="i-simple-icons-nuxtdotjs" />
+    <USeparator icon="i-mdi-cat" />
 
     <UFooter>
       <template #left>
@@ -47,14 +67,7 @@ useSeoMeta({
       </template>
 
       <template #right>
-        <UButton
-          to="https://github.com/nuxt-ui-templates/starter"
-          target="_blank"
-          icon="i-simple-icons-github"
-          aria-label="GitHub"
-          color="neutral"
-          variant="ghost"
-        />
+        <p>footer right</p>
       </template>
     </UFooter>
   </UApp>
