@@ -25,13 +25,16 @@ const { locale, locales, setLocale } = useI18n()
 
 const availableLocales = computed(() =>
   locales.value
-    .map(locale => nuxtUiLocales[typeof locale === 'string' ? locale : locale.code])
+    .map(locale => {
+      const localeCode = typeof locale === 'string' ? locale : locale.code
+      return nuxtUiLocales[localeCode as keyof typeof nuxtUiLocales]
+    })
     .filter(Boolean)
 )
 
 const currentLocale = computed({
   get: () => locale.value,
-  set: (val: string) => val && setLocale(val as 'en' | 'de')
+  set: (val: Parameters<typeof setLocale>[0]) => val && setLocale(val)
 })
 
 </script>
