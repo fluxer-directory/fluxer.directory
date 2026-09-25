@@ -3,5 +3,9 @@
     "description": "A hub for users to discover community-hosted fluxer instances and list their own.",
     "your-instance": "Your instance could be here!",
     "new": "New",
-    "your-description": "Press the + button in the top right to start adding your own instance"
+    "your-description": "Press the + button in the top right to start adding your own instance",
+    "disclaimer": "Not affiliated with or endorsed by Fluxer Platform AB",
+    "nuxt": "Built with Nuxt UI",
+    "contact": "Contact",
+    "github": "Source code"
 }
