@@ -4,3 +4,4 @@
     <h1>{{ $t('description') }}</h1>
   </div>
 </template>
+
