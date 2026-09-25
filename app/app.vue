@@ -6,9 +6,6 @@ useHead({
   link: [
     { rel: 'icon', href: '/favicon.ico' }
   ],
-  htmlAttrs: {
-    lang: 'en'
-  }
 })
 
 const title = 'The Fluxer Directory'
