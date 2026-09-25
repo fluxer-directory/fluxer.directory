@@ -29,5 +29,13 @@ export default defineNuxtConfig({
         braceStyle: '1tbs'
       }
     }
+  },
+
+  i18n: {
+    locales: [
+      { code: 'en', language: 'en-US' },
+      { code: 'de', language: 'de-DE' }
+    ],
+    defaultLocale: 'en',
   }
 })
