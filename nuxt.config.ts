@@ -33,9 +33,10 @@ export default defineNuxtConfig({
 
   i18n: {
     baseUrl: 'https://fluxer.directory',
+    strategy: 'prefix_and_default',
     locales: [
-      { code: 'en', language: 'en-US' },
-      { code: 'de', language: 'de-DE' }
+      { code: 'en', language: 'en-US', file: 'en.json' },
+      { code: 'de', language: 'de-DE', file: 'de.json' }
     ],
     defaultLocale: 'en',
   }
