@@ -1,4 +1,7 @@
 {
     "title": "The Fluxer Directory",
-    "description": "A hub for users to discover community-hosted fluxer instances and list their own."
+    "description": "A hub for users to discover community-hosted fluxer instances and list their own.",
+    "your-instance": "Your instance could be here!",
+    "new": "New",
+    "your-description": "Press the + button in the top right to start adding your own instance"
 }

@@ -1,4 +1,7 @@
 {
     "title": "Das Fluxer Verzeichnis",
-    "description": "Ein Ort für Nutzer um von der Community selbstgehostete Fluxer-Instanzen zu entdecken und einzutragen."
+    "description": "Ein Ort für Nutzer um von der Community selbstgehostete Fluxer-Instanzen zu entdecken und einzutragen.",
+    "your-instance": "Deine Instanz könnte hier stehen!",
+    "new": "Neu",
+    "your-description": "Drück den + Knopf oben rechts, um jetzt deine Instanz hinzuzufügen"
 }
