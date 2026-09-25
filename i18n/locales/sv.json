@@ -1,0 +1,11 @@
+{
+    "title": "Fluxer-katalogen",
+    "description": "En hubb för användare att upptäcka community-hostade Fluxer-instanser och lista sina egna.",
+    "your-instance": "Din instans kan vara här!",
+    "new": "Ny",
+    "your-description": "Tryck på + knappen uppe till höger för att börja lägga till dina egna instanser!",
+    "disclaimer": "Inte ansluten till eller sponsrad av Fluxer Platform AB",
+    "nuxt": "Byggd med Nuxt UI",
+    "contact": "Kontakt",
+    "github": "Källkod"
+}
