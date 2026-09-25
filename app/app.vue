@@ -41,6 +41,7 @@ const currentLocale = computed({
 
 <template>
   <UApp>
+    <UBanner color="success" :title="$t('title')" />
     <UHeader>
       <template #left>
         <p>logo goes here</p>
@@ -49,7 +50,7 @@ const currentLocale = computed({
       <template #right>
         <ULocaleSelect v-model="currentLocale" :locales="availableLocales" />
         <UColorModeButton />
-        <UButton icon="i-mdi-plus" to="/new" />
+        <AddInstanceModal />
       </template>
     </UHeader>
 

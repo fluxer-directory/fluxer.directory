@@ -7,5 +7,18 @@
     "disclaimer": "Not affiliated with or endorsed by Fluxer Platform AB",
     "nuxt": "Built with Nuxt UI",
     "contact": "Contact",
-    "github": "Source code"
+    "github": "Source code",
+    "top-banner": "Heya, this page is still early into development, more features and better UI are in the works! You can suggest stuff at github, linked in the footer!",
+    "add-instance": "Submit a new instance",
+    "add-instance-info": "These are reviewed manually. You will recieve an email to the contact email you provide below when your instance is approved. (This domain is pretty new, it might land in spam, so be sure to check that occasionally ^^)",
+    "form-name": "Name",
+    "form-url": "URL",
+    "form-banner-url": "Banner-URL",
+    "form-description": "Description",
+    "form-language": "Main Language",
+    "form-tags": "Tags",
+    "form-email": "Contact-Email",
+    "form-submit": "Submit",
+    "form-success": "Submitted successfully! Awaiting manual approval.",
+    "form-error": "An error occured, please try again or contact an administrator!"
 }

@@ -7,5 +7,18 @@
     "disclaimer": "Inte ansluten till eller sponsrad av Fluxer Platform AB",
     "nuxt": "Byggd med Nuxt UI",
     "contact": "Kontakt",
-    "github": "Källkod"
+    "github": "Källkod",
+    "top-banner": "",
+    "add-instance": "Submit a new instance",
+    "add-instance-info": "These are reviewed manually. You will recieve an email to the contact email you provide below when your instance is approved. (This domain is pretty new, it might land in spam, so be sure to check that occasionally ^^)",
+    "form-name": "Name",
+    "form-url": "URL",
+    "form-banner-url": "Banner-URL",
+    "form-description": "Description",
+    "form-language": "Most common Language",
+    "form-tags": "Tags",
+    "form-email": "Contact-Email",
+    "form-submit": "Submit",
+    "form-success": "Submitted successfully! Awaiting manual approval.",
+    "form-error": "An error occured, please try again or contact an administrator!"
 }

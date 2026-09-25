@@ -7,5 +7,18 @@
     "disclaimer": "Steht in keiner Verbindung zu Fluxer Platform AB",
     "nuxt": "Programmiert mit Nuxt UI",
     "contact": "Kontakt",
-    "github": "Quellcode"
+    "github": "Quellcode",
+    "top-banner": "",
+    "add-instance": "Eine neue Instanz hinzuzufügen",
+    "add-instance-info": "Diese werden manuell überprüft. Du erhältst eine E-Mail an die Kontakt E-Mail die du unten angibst wenn deine Instanz akzeptiert wird. (Diese Domain ist relativ neu, die Mail könnte im Spam landen, da ab und an mal reinschauen ^^)",
+    "form-name": "Name",
+    "form-url": "URL",
+    "form-banner-url": "Banner-URL",
+    "form-description": "Beschreibung",
+    "form-language": "Meist gesprochene Sprache",
+    "form-tags": "Tags",
+    "form-email": "Kontakt-Email",
+    "form-submit": "Absenden",
+    "form-success": "Erfolgreich eingereicht! Warte auf manuelle Überprüfung.",
+    "form-error": "Ein Fehler ist aufgetreten, bitte versuch's nochmal oder wende dich an einen Administrator!"
 }
