@@ -15,6 +15,18 @@
           <NuxtLink external="true" :to="instance.url" class="text-blue-500 underline">{{ instance.url }}</NuxtLink>
         </template>
       </UCard>
+      <UCard variant="outline" class="bg-yellow-500/10">
+        <template #header>
+          <p class="text-2xl">{{ $t('your-instance') }}</p>
+          <UBadge :label="$t('new')" />
+        </template>
+        <p>{{ $t('your-description') }}</p>
+        <template #footer>
+          <NuxtLink external="true" to="https://fluxer.directory" class="text-blue-500 underline">
+            https://fluxer.directory
+          </NuxtLink>
+        </template>
+      </UCard>
     </div>
   </div>
 </template>
