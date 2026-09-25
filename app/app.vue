@@ -49,6 +49,7 @@ const currentLocale = computed({
       <template #right>
         <ULocaleSelect v-model="currentLocale" :locales="availableLocales" />
         <UColorModeButton />
+        <UButton icon="i-mdi-plus" to="/new" />
       </template>
     </UHeader>
 
@@ -56,17 +57,27 @@ const currentLocale = computed({
       <NuxtPage class="px-6" />
     </UMain>
 
-    <USeparator icon="i-mdi-cat" />
+    <USeparator icon="i-mdi-book-open-blank-variant-outline" />
 
     <UFooter>
       <template #left>
         <p class="text-sm text-muted">
-          Built with Nuxt UI • Not affiliated with or endorsed by Fluxer Platform AB
+          {{ $t('nuxt') }} • {{ $t('disclaimer') }}
         </p>
       </template>
 
       <template #right>
-        <p>footer right</p>
+        <span class="text-sm text-muted flex gap-x-2 items-center">
+          <NuxtLink :external="true" to="mailto:contact@fluxer.directory">
+            {{ $t('contact') }}
+            <UIcon name="i-mdi-email" />
+          </NuxtLink>
+          •
+          <NuxtLink :external="true" to="https://github.com/fluxer-directory/fluxer.directory">
+            {{ $t('github') }}
+            <UIcon name="i-mdi-github" />
+          </NuxtLink>
+        </span>
       </template>
     </UFooter>
   </UApp>
