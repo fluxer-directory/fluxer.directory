@@ -44,16 +44,13 @@ const currentLocale = computed({
       </template>
 
       <template #right>
-        <ULocaleSelect 
-          v-model="currentLocale" 
-          :locales="availableLocales" 
-        />
+        <ULocaleSelect v-model="currentLocale" :locales="availableLocales" />
         <UColorModeButton />
       </template>
     </UHeader>
 
     <UMain>
-      <NuxtPage />
+      <NuxtPage class="px-6" />
     </UMain>
 
     <USeparator icon="i-mdi-cat" />
