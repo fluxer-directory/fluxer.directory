@@ -2,7 +2,7 @@
 @import "@nuxt/ui";
 
 @theme static {
-  --font-sans: 'Public Sans', sans-serif;
+  --font-sans: 'CitySans', sans-serif;
 
   --color-green-50: #EFFDF5;
   --color-green-100: #D9FBE8;
@@ -17,6 +17,13 @@
   --color-green-950: #052E16;
 }
 
+@font-face {
+  font-family: 'CitySans';
+  src: url('../fonts/CitySans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 h1 {
   font-size: xx-large;
