@@ -1,16 +1,18 @@
 <template>
   <div>
-    <div>
+    <div class="flex min-h-[33vh] flex-col justify-center">
       <h1>{{ $t('title') }}</h1>
       <h1>{{ $t('description') }}</h1>
     </div>
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      <UCard v-for="instance in instances ?? []" :key="instance._id">
+      <UCard v-for="instance in instances ?? []" :key="instance._id" variant="soft" class="bg-teal-500/20"
+        :ui="{ body: 'p-0 sm:p-0' }">
         <template #header>
           <p class="text-2xl">{{ instance.name }}</p>
           <UBadge v-for="tag in instance.tags" :label="tag" />
         </template>
-        <p>{{ instance.description }}</p>
+        <NuxtImg :src="instance.banner_url" class="block w-full px-[-1em]" />
+        <p class="p-2">{{ instance.description }}</p>
         <template #footer>
           <NuxtLink external="true" :to="instance.url" class="text-blue-500 underline">{{ instance.url }}</NuxtLink>
         </template>
