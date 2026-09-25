@@ -47,7 +47,6 @@ const currentLocale = computed({
         <ULocaleSelect 
           v-model="currentLocale" 
           :locales="availableLocales" 
-          class="w-48" 
         />
         <UColorModeButton />
       </template>
@@ -62,7 +61,7 @@ const currentLocale = computed({
     <UFooter>
       <template #left>
         <p class="text-sm text-muted">
-          Built with Nuxt UI • © {{ new Date().getFullYear() }}
+          Built with Nuxt UI • Not affiliated with or endorsed by Fluxer Platform AB
         </p>
       </template>
 
