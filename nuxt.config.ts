@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     '@nuxt/hints',
     '@nuxtjs/i18n',
     '@nuxtjs/seo',
-    '@pinia/nuxt'
+    '@pinia/nuxt',
+    'nuxt-mongoose'
   ],
 
   devtools: {
@@ -39,5 +40,11 @@ export default defineNuxtConfig({
       { code: 'de', language: 'de-DE', file: 'de.json' }
     ],
     defaultLocale: 'en',
+  }, 
+
+  mongoose: {
+    uri: process.env.NUXT_MONGOOSE_URI,
+    options: {},
+    modelsDir: 'models',
   }
 })
