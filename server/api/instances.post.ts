@@ -11,7 +11,10 @@ export default defineEventHandler(async (event) => {
     })
   }
 
-  const instance = await Instance.create(result.data)
+  const instance = await Instance.create({
+    ...result.data,
+    approved: false
+  })
   setResponseStatus(event, 201)
 
   return instance
