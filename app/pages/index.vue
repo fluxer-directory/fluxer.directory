@@ -9,7 +9,7 @@
         :ui="{ body: 'p-0 sm:p-0' }">
         <template #header>
           <p class="text-2xl">{{ instance.name }}</p>
-          <UBadge v-for="tag in instance.tags" :label="tag" />
+          <UBadge v-for="tag in instance.tags" :label="tag" class="mr-2" />
         </template>
         <NuxtImg :src="instance.banner_url" class="block w-full px-[-1em]" />
         <p class="p-2">{{ instance.description }}</p>
