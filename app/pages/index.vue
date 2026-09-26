@@ -14,7 +14,7 @@
         <NuxtImg :src="instance.banner_url" class="block w-full px-[-1em]" />
         <p class="p-2">{{ instance.description }}</p>
         <template #footer>
-          <NuxtLink external="true" :to="instance.url" class="text-blue-500 underline">{{ instance.url }}</NuxtLink>
+          <NuxtLink :external="true" :to="instance.url" class="text-blue-500 underline">{{ instance.url }}</NuxtLink>
         </template>
       </UCard>
       <UCard variant="outline" class="bg-yellow-500/10" :ui="{ body: 'p-0 sm:p-0' }">
@@ -25,7 +25,7 @@
         <NuxtImg src="/images/recursion.webp" class="block w-full px-[-1em]" />
         <p class="p-2">{{ $t('your-description') }}</p>
         <template #footer>
-          <NuxtLink external="true" to="https://fluxer.directory/" class="text-blue-500 underline">
+          <NuxtLink :external="true" to="https://fluxer.directory/" class="text-blue-500 underline">
             https://fluxer.directory/
           </NuxtLink>
         </template>
