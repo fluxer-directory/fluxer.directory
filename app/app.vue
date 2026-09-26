@@ -11,6 +11,8 @@ useHead({
 const title = 'The Fluxer Directory'
 const description = 'A place for users to discover self-hosted Fluxer instances and list their own'
 
+import fluxerLogo from '~/assets/images/fluxer-symbol.svg?url'
+
 useSeoMeta({
   title,
   description,
@@ -55,15 +57,19 @@ const logout = async () => {
       </template>
 
       <template #right>
+        <AddInstanceModal v-if="loggedIn" />
         <ULocaleSelect v-model="currentLocale" :locales="availableLocales" />
         <UColorModeButton />
-        <UButton v-if="!loggedIn" :external="true" to="/api/auth/fluxer" icon="i-mdi-login">
+        <UButton v-if="!loggedIn" to="/api/auth/fluxer" external>
+          <template #leading>
+            <img :src="fluxerLogo" alt="fluxer-logo" aria-hidden="true" class="size-5">
+          </template>
+
           Login with Fluxer
         </UButton>
         <UButton v-else variant="ghost" icon="i-mdi-logout" @click="logout">
           {{ user?.globalName || user?.username }}
         </UButton>
-        <AddInstanceModal />
       </template>
     </UHeader>
 
