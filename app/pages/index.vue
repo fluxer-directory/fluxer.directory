@@ -35,9 +35,11 @@
 </template>
 
 <script setup>
+const title = "Instances"
+
 useSeoMeta({
   title,
-  ogTitle: "Instances",
+  ogTitle: title,
 })
 
 const { data: instances, error, pending, refresh } = useFetch("/api/instances")
