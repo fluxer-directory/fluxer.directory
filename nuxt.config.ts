@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxtjs/seo',
     '@pinia/nuxt',
-    'nuxt-mongoose'
+    'nuxt-mongoose',
+    'nuxt-auth-utils'
   ],
 
   devtools: {
@@ -23,6 +24,17 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   compatibilityDate: '2026-06-30',
+
+  runtimeConfig: {
+    oauth: {
+      fluxer: {
+        apiBase: '',
+        clientId: '',
+        clientSecret: '',
+        redirectUrl: ''
+      }
+    }
+  },
 
   eslint: {
     config: {
