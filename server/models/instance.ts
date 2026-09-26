@@ -9,6 +9,7 @@ export const instanceSchema = z.object({
   language: z.string().min(1),
   tags: z.array(z.string()).optional(),
   contact_mail: z.string().email(),
+  user_id: z.string().optional(),
   approved: z.boolean().optional()
 })
 
@@ -22,5 +23,6 @@ export const Instance = defineMongooseModel<InstanceDocument>('Instance', {
   language: { type: String, required: true },
   tags: { type: [String], required: true },
   contact_mail: { type: String, required: true},
+  user_id: { type: String, required: false },
   approved: { type: Boolean, required: false }
 })
