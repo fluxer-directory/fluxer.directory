@@ -5,8 +5,8 @@
       <h1>{{ $t('description') }}</h1>
     </div>
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      <UCard v-for="instance in instances ?? []" :key="instance._id" variant="soft" class="bg-teal-500/20"
-        :ui="{ body: 'p-0 sm:p-0' }">
+      <UCard v-for="instance in instances ?? []" :key="instance._id" variant="soft"
+        class="flex h-full flex-col bg-teal-500/20" :ui="{ body: 'flex-1 p-0 sm:p-0', footer: 'mt-auto' }">
         <template #header>
           <p class="text-2xl">{{ instance.name }}</p>
           <UBadge v-for="tag in instance.tags" :label="tag" class="mr-2" />
@@ -17,7 +17,8 @@
           <NuxtLink :external="true" :to="instance.url" class="text-blue-500 underline">{{ instance.url }}</NuxtLink>
         </template>
       </UCard>
-      <UCard variant="outline" class="bg-yellow-500/10" :ui="{ body: 'p-0 sm:p-0' }">
+      <UCard variant="outline" class="flex h-full flex-col bg-yellow-500/10"
+        :ui="{ body: 'flex-1 p-0 sm:p-0', footer: 'mt-auto' }">
         <template #header>
           <p class="text-2xl">{{ $t('your-instance') }}</p>
           <UBadge :label="$t('new')" />
