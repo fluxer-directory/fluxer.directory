@@ -37,6 +37,13 @@ const currentLocale = computed({
   set: (val: Parameters<typeof setLocale>[0]) => val && setLocale(val)
 })
 
+const { loggedIn, user, clear } = useUserSession()
+
+const logout = async () => {
+  await $fetch('/api/auth/logout', { method: 'POST' })
+  await clear()
+}
+
 </script>
 
 <template>
@@ -50,6 +57,12 @@ const currentLocale = computed({
       <template #right>
         <ULocaleSelect v-model="currentLocale" :locales="availableLocales" />
         <UColorModeButton />
+        <UButton v-if="!loggedIn" :external="true" to="/api/auth/fluxer" icon="i-mdi-login">
+          Login with Fluxer
+        </UButton>
+        <UButton v-else variant="ghost" icon="i-mdi-logout" @click="logout">
+          {{ user?.globalName || user?.username }}
+        </UButton>
         <AddInstanceModal />
       </template>
     </UHeader>
