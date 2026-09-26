@@ -9,7 +9,7 @@ export const instanceSchema = z.object({
   language: z.string().min(1),
   tags: z.array(z.string()).optional(),
   contact_mail: z.string().email(),
-  approved: z.boolean()
+  approved: z.boolean().optional()
 })
 
 export type InstanceDocument = z.infer<typeof instanceSchema>

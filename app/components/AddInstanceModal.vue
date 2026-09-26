@@ -80,9 +80,24 @@ const state = reactive<Partial<Schema>>({
 
 })
 
+const { data: instances, error, pending, refresh } = useFetch("/api/instances")
+
 const toast = useToast()
 async function onSubmit(event: FormSubmitEvent<Schema>) {
-    toast.add({ title: 'Success', description: 'The form has been submitted.', color: 'success' })
-    console.log(event.data)
+    if (instances.value?.some(i => i.url == event.data.url)) {
+        toast.add({ title: 'Error', description: 'An instance with this URL has already been submitted.', color: 'error' })
+        return
+    }
+
+    const { error } = await useFetch('/api/instances', {
+        method: 'POST',
+        body: event.data
+    })
+
+    if (!error.value) {
+        toast.add({ title: 'Success', description: 'The form has been submitted.', color: 'success' })
+    } else {
+        toast.add({ title: 'Error', description: 'Could not submit the instance.', color: 'error' })
+    }
 }
 </script>

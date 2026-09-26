@@ -44,7 +44,7 @@ const currentLocale = computed({
     <UBanner color="success" :title="$t('top-banner')" />
     <UHeader>
       <template #left>
-        <p>logo goes here</p>
+        <p>Some logo goes here (WIP)</p>
       </template>
 
       <template #right>
