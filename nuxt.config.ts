@@ -15,6 +15,11 @@ export default defineNuxtConfig({
     enabled: true
   },
 
+  site: {
+    name: 'The Fluxer Directory',
+    url: 'https://fluxer.directory'
+  },
+
   css: ['~/assets/css/main.css'],
 
   compatibilityDate: '2026-06-30',

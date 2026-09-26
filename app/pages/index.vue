@@ -35,5 +35,10 @@
 </template>
 
 <script setup>
+useSeoMeta({
+  title,
+  ogTitle: "Instances",
+})
+
 const { data: instances, error, pending, refresh } = useFetch("/api/instances")
 </script>
