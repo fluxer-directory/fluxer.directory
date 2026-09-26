@@ -65,7 +65,7 @@ const logout = async () => {
             <img :src="fluxerLogo" alt="fluxer-logo" aria-hidden="true" class="size-5">
           </template>
 
-          Login with Fluxer
+          {{ $t('fluxer-login') }}
         </UButton>
         <UButton v-else variant="ghost" icon="i-mdi-logout" @click="logout">
           {{ user?.globalName || user?.username }}

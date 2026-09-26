@@ -20,5 +20,6 @@
     "form-email": "Contact-Email",
     "form-submit": "Submit",
     "form-success": "Submitted successfully! Awaiting manual approval.",
-    "form-error": "An error occured, please try again or contact an administrator!"
+    "form-error": "An error occured, please try again or contact an administrator!",
+    "fluxer-login": "Login with Fluxer"
 }

@@ -20,5 +20,6 @@
     "form-email": "Kontakt-Email",
     "form-submit": "Absenden",
     "form-success": "Erfolgreich eingereicht! Warte auf manuelle Überprüfung.",
-    "form-error": "Ein Fehler ist aufgetreten, bitte versuch's nochmal oder wende dich an einen Administrator!"
+    "form-error": "Ein Fehler ist aufgetreten, bitte versuch's nochmal oder wende dich an einen Administrator!",
+    "fluxer-login": "Mit Fluxer anmelden"
 }

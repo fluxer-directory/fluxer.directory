@@ -3,7 +3,7 @@
     "description": "A hub for users to discover community-hosted fluxer instances and list their own.",
     "your-instance": "Your instance could be here!",
     "new": "New",
-    "your-description": "Press the + button in the top right to start adding your own instance",
+    "your-description": "Log in and then use the + button in the top right to start adding your own instance",
     "disclaimer": "Not affiliated with or endorsed by Fluxer Platform AB",
     "nuxt": "Built with Nuxt UI",
     "contact": "Contact",
@@ -20,5 +20,6 @@
     "form-email": "Contact-Email",
     "form-submit": "Submit",
     "form-success": "Submitted successfully! Awaiting manual approval.",
-    "form-error": "An error occured, please try again or contact an administrator!"
+    "form-error": "An error occured, please try again or contact an administrator!",
+    "fluxer-login": "Login with Fluxer"
 }
