@@ -41,7 +41,7 @@ const title = "Instances"
 
 useSeoMeta({
   title,
-  ogTitle: title,
+  ogTitle: "The Fluxer Directory",
 })
 
 const { data: instances, error, pending, refresh } = useFetch("/api/instances")
