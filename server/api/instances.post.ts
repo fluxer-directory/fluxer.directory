@@ -27,5 +27,17 @@ export default defineEventHandler(async (event) => {
   })
   setResponseStatus(event, 201)
 
+  if (process.env.NTFY_SERVER && process.env.NTFY_TOPIC && process.env.NTFY_TOKEN) {
+    $fetch(`${process.env.NTFY_SERVER}/${process.env.NTFY_TOPIC}`, {
+      method: 'POST',
+      body: '',
+      headers: {
+          'Title': 'New instance ready for review!',
+          'Click': 'https://fluxer.directory/',
+          'Authorization': `Bearer ${process.env.NTFY_TOKEN}`
+      }
+    })
+  }
+
   return instance
 })
