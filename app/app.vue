@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { DropdownMenuItem } from '@nuxt/ui'
+
 useHead({
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' }
@@ -46,6 +48,14 @@ const logout = async () => {
   await clear()
 }
 
+const items: DropdownMenuItem[] = [
+  {
+    label: 'My submissions',
+    icon: 'i-mdi-format-list-text',
+    to: "/profile"
+  },
+]
+
 </script>
 
 <template>
@@ -53,11 +63,16 @@ const logout = async () => {
     <UBanner color="success" :title="$t('top-banner')" />
     <UHeader>
       <template #left>
-        <p>Some logo goes here (WIP)</p>
+        <p></p>
       </template>
 
       <template #right>
-        <AddInstanceModal v-if="loggedIn" />
+        <UFieldGroup v-if="loggedIn">
+          <AddInstanceModal />
+          <UDropdownMenu :items="items">
+            <UButton color="neutral" variant="outline" icon="i-lucide-chevron-down" />
+          </UDropdownMenu>
+        </UFieldGroup>
         <ULocaleSelect v-model="currentLocale" :locales="availableLocales" />
         <UColorModeButton />
         <UButton v-if="!loggedIn" to="/api/auth/fluxer" external>
