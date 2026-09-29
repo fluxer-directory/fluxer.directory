@@ -63,7 +63,7 @@ const items: DropdownMenuItem[] = [
     <UBanner color="success" :title="$t('top-banner')" />
     <UHeader>
       <template #left>
-        <p></p>
+        <UButton variant="outline" icon="i-mdi-home" to="/" />
       </template>
 
       <template #right>
