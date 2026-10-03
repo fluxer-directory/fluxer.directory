@@ -8,40 +8,40 @@
                     <h1>{{ $t('add-instance') }}</h1>
                     <p>{{ $t('add-instance-info') }}</p>
                 </div>
-                <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
-                    <UFormField :label="$t('form-name')" name="name">
-                        <UInput v-model="state.name" />
-                    </UFormField>
+                <LazyUForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
+                    <LazyUFormField :label="$t('form-name')" name="name">
+                        <LazyUInput v-model="state.name" />
+                    </LazyUFormField>
 
-                    <UFormField :label="$t('form-url')" name="url">
-                        <UInput v-model="state.url" type="url" />
-                    </UFormField>
+                    <LazyUFormField :label="$t('form-url')" name="url">
+                        <LazyUInput v-model="state.url" type="url" />
+                    </LazyUFormField>
 
-                    <UFormField :label="$t('form-banner-url')" name="url">
-                        <UInput v-model="state.banner_url" type="url" />
-                    </UFormField>
+                    <LazyUFormField :label="$t('form-banner-url')" name="url">
+                        <LazyUInput v-model="state.banner_url" type="url" />
+                    </LazyUFormField>
 
-                    <UFormField :label="$t('form-description')" name="description">
-                        <UTextarea v-model="state.description" :rows="4" autoresize />
-                    </UFormField>
+                    <LazyUFormField :label="$t('form-description')" name="description">
+                        <LazyUTextarea v-model="state.description" :rows="4" autoresize />
+                    </LazyUFormField>
 
-                    <UFormField :label="$t('form-language')" name="language">
-                        <USelectMenu v-model="state.language" :items="languages" value-key="value" label-key="label"
+                    <LazyUFormField :label="$t('form-language')" name="language">
+                        <LazyUSelectMenu v-model="state.language" :items="languages" value-key="value" label-key="label"
                             searchable placeholder="Select a language" />
-                    </UFormField>
+                    </LazyUFormField>
 
-                    <UFormField :label="$t('form-tags')" name="tags">
-                        <UInputTags v-model="state.tags" placeholder="Add a tag and press Enter" />
-                    </UFormField>
+                    <LazyUFormField :label="$t('form-tags')" name="tags">
+                        <LazyUInputTags v-model="state.tags" placeholder="Add a tag and press Enter" />
+                    </LazyUFormField>
 
-                    <UFormField :label="$t('form-email')" name="email">
-                        <UInput v-model="state.contact_mail" type="email" />
-                    </UFormField>
+                    <LazyUFormField :label="$t('form-email')" name="email">
+                        <LazyUInput v-model="state.contact_mail" type="email" />
+                    </LazyUFormField>
 
-                    <UButton type="submit">
+                    <LazyUButton type="submit">
                         {{ $t('form-submit') }}
-                    </UButton>
-                </UForm>
+                    </LazyUButton>
+                </LazyUForm>
             </div>
         </template>
     </UModal>
