@@ -6,7 +6,7 @@
         </div>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
 
-            <UCard v-for="instance in instances ?? []" :key="instance._id" variant="soft"
+            <UCard v-for="instance in userInstances" :key="instance._id" variant="soft"
                 class="flex h-full flex-col bg-teal-500/20 !ring-2 !ring-teal-500/40"
                 :ui="{ root: 'divide-teal-500/40', body: 'flex-1 p-0 sm:p-0', footer: 'mt-auto' }">
                 <template #header>
@@ -29,11 +29,10 @@
 </template>
 
 <script setup lang="ts">
-const { data: instances, error, pending, refresh } = useFetch("/api/instances?unapproved=true", {
-    transform: (data) => data.filter(instance =>
-        instance.user_id === user.value?.fluxerId
-    )
-})
-
 const { user } = useUserSession()
+const { data: instances, error, pending, refresh } = useFetch("/api/instances?unapproved=true")
+
+const userInstances = computed(() =>
+    (instances.value ?? []).filter(instance => instance.user_id === user.value?.fluxerId)
+)
 </script>
